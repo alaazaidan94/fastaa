@@ -45,7 +45,7 @@ def get_user(id):
 
 @app.get("/users")  
 def getAllUser():
-    db = sqlite3.connect("DataBase.db")
+    db = sqlite3.connect("DataBase.sqlite3")
     cur = db.cursor()
     cur.execute("SELECT * from users")
     c = cur.fetchall()
